@@ -1,0 +1,559 @@
+/*------------------------------------------------
+  COLOR
+  grey:       #8E8F8F
+  grey-light: #808080	rgb(128, 128, 128) 
+  red:        #D0131C rgb(208, 19, 28)
+  black:      #000;
+ 
+  
+  
+/*------------------------------------------------
+  Author:   Roger Kaufman, Rhea Baer
+  Project:  URL: namida/voices.com
+  Version:  1
+  Date:     July 2012  */
+
+
+
+/*------------------------------------------------
+  + reset
+  + structur
+  + typography
+  + lists
+  + navigation
+  + paginator 
+  + table 
+  + form
+  + controls
+  + helper
+  + site styles
+  + javaScript styles
+  + media querius
+  + print styles   */ 
+  
+  
+
+/*------------------------------------------------
+  + RESET */  
+
+/* Eric Meyer's CSS Reset 
+  http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126 */  
+   
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {   
+  	margin: 0;
+  	padding: 0;
+  	border: 0;
+  	font: inherit;
+  	vertical-align: baseline;  
+  }
+
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+  	display: block;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  html { font-size: 62.5%; }
+  body { line-height: 1; }
+  ol, ul { list-style: none; }
+  blockquote, q { quotes: none; }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+  	content: '';
+  	content: none; }
+  table { border-collapse: collapse; border-spacing: 0; } 
+
+
+  * {
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+  }
+  
+  ::-webkit-input-placeholder {
+    /* text-transform: uppercase;*/
+  }
+  
+  input:-moz-placeholder {  
+    /* text-transform: uppercase;*/
+  }
+  
+  ::selection {
+    background: #8E8F8F;;
+    color: #fff;
+  }
+  
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+  a:hover, a:active 
+  input, select { outline: 0; }
+ 
+ 
+
+/*------------------------------------------------
+  + STURCTUR */     
+  
+  body {
+    font: 13px/1.6 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #000; 
+    -webkit-font-smoothing: antialiased; 
+    -webkit-text-size-adjust: 100%; 
+  } 
+
+  div.container {
+      width: 92%;
+      margin: 2% 2% 0 2%;
+      max-width: 1640px;
+  }
+  
+  section.instruction  { 
+    width: 100%; 
+    margin: 38px 0 19px 0; margin: 3.8rem 0 1.9rem 0;
+  } 
+  
+  .paginator_line {
+    position: relative;
+    right: 0;
+    bottom: -19px;
+  }
+  
+  section.form,
+  section.table {
+    float: left;
+    width: 575px;
+  }
+  
+
+  
+/*------------------------------------------------
+  + TYPOGRAPHY */  
+  
+  ul,
+  li,
+  table,
+  p,  
+  label,
+  select,
+  input[type=text],
+  input[type=password],
+  input[type=reset],
+  input[type=submit] { 
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px; font-size: 1.3rem;
+    line-height: 19px; line-height: 1.9rem;
+  }
+  
+  .pagination li {
+    font-size: 10px; font-size: 1rem;
+  }
+  
+
+/* links ---------------------- */   
+  a { color: #000; }
+  a:visited { color:#000; }
+  a:hover { color: #000; }
+  a:focus { outline: none }
+  
+  .pointer {
+      cursor:pointer;
+  }
+      
+  
+/* paragraph ---------------------- */    
+
+
+
+    
+/*------------------------------------------------
+  + LIST */ 
+  
+  /* navigation ---------------------- */ 
+  ul.nav li:before { content: "//"; color: #000; }
+  ul.nav li:first-child:before, ul.nav li:last-child:before { content: " "; }
+  ul.nav li:last-child a, nav ul.nav li:last-child { float: right; }
+
+  ul.nav li a:hover { text-decoration: underline; }
+  ul.nav li:hover a, ul.nav li a:focus { text-decoration: underline; } 
+  ul.nav li.current:hover a, ul.nav li.current a:focus { text-decoration: none; }
+
+  ul.nav { display: block;  margin: 45px 0 35px 0; padding-bottom:7px;  overflow: hidden; border-bottom: 1px solid #000;}
+  ul.nav li { padding: 0; margin-right: 3px; float: left; }
+  ul.nav li a,  nav ul.nav li  { text-transform: uppercase; margin-left:7px; font-size:11px; font-size:1.1rem; }
+  ul.nav li:first-child a, nav ul.nav li:first-child { margin-left: 0; } 
+
+
+  /* paginator ---------------------- */ 
+  .pagination { float:right; }
+  .pagination li { display: inline-block; padding: 0 2px; padding: 0 0.2rem; font-size: 10px; font-size: 1rem; }
+  .pagination a, .pagination_current span { padding: 2px 5px; padding: 0.2rem 0.5rem; }
+  .pagination a { background-color: #8E8F8F; }
+  .pagination a:hover { background-color: #000; color: #8E8F8F; }
+  .pagination a:visited { /*color: #fff;*/ }
+  .pagination_next, .pagination_previous { display: none; }
+  .pagination_current span { }
+  .pagination_current:before { content: " \2014 "; }
+  .pagination_digit { }
+
+
+    
+/*------------------------------------------------
+  + TABELE */ 
+  
+  table { width: 100%; table-layout: auto; }
+  caption { padding-bottom: 6px; padding-bottom: 0.6rem; text-align: left; }
+  th { text-align: left; font-weight: bold; border: none;}
+  th>a, th>a:hover { color: #000; }
+  tr {height: 19px; line-height: 19px;}
+
+/*  tr:nth-of-type(odd) { border-bottom: 3px solid #999; }*/
+  td, th { border: 1px solid #8E8F8F; padding: 0px 4px 0px 4px;  }
+  tr:last-child { border-bottom: 1px solid #fff}
+
+  table.table-audio {
+    margin-bottom: 20px; margin-bottom: 20rem;
+  }
+    
+  table.table-audio tr td {
+      vertical-align: top;
+  }
+  
+  td:nth-of-type(1)  { width:6%;  text-align: left; }
+  
+ .table-audio td:nth-of-type(1)  { width:  3%;  text-align: left; text-align: center;}
+ .table-audio td:nth-of-type(2)  { width: 13%;  text-align: left; text-align: center; cursor:pointer;}
+ .table-audio td:nth-of-type(3)  { width: 21%;  text-align: left; }
+ .table-audio td:nth-of-type(4)  { width: 21%;  text-align: left; }
+ .table-audio td:nth-of-type(5)  { width:  9%;  text-align: left; }
+ .table-audio td:nth-of-type(6)  { width:  9%;  text-align: left; }
+ .table-audio td:nth-of-type(7)  { width:  9%;  text-align: left; } 
+ .table-audio td:nth-of-type(8)  { width:  3%;  text-align: left; text-align: center;}
+ .table-audio td:nth-of-type(9)  { width:  3%;  text-align: center; }
+ .table-audio td:nth-of-type(10) { width:  6%;  text-align: left; }
+ .table-audio td:nth-of-type(11) { width:  3%;  text-align: center; vertical-align: middle !important; }
+ 
+ 
+
+  
+  
+  
+  
+  
+ 
+/*------------------------------------------------
+  + FORM */ 
+
+/* shared ---------------------- */    
+  
+  label,
+  input[type=text],
+  input[type=password],
+  select {
+    height: 20px; height: 2rem;
+  }
+  
+  label {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 20%;
+  }
+
+  select,
+  input[type=text],
+  input[type=password]{
+    border: 1px solid black;
+    background: #fff;
+    vertical-align: middle;
+    text-indent: 4px;
+  }
+  
+  input[type=submit],
+  input[type=reset] { 
+    padding: 2px 3px  1px  3px;  padding:  0.2rem 0.3rem 0.1rem 0.3rem;
+    background-color: #000;
+    border:none; 
+    font-size: 10px; font-size: 1rem;
+    line-height: 1.3; 
+    text-transform: uppercase; 
+    color: #fff; 
+    letter-spacing: 1px;
+  }
+  
+  
+/* theme, country, language, editor ---------------------- */  
+
+  .form li {
+    margin-bottom: 20px; margin-bottom: 2rem;
+  }
+  
+  section.form {
+    margin-right: 4%;
+  }
+  
+  .form input[type=text],
+  input[type=password]{
+    width: 80%;
+  }
+  
+  input[type=reset],
+  input[type=submit] {
+    float: right;
+  }
+  
+  .form-error-msg {
+    margin: 19px 0 19px 0; margin: 1.9rem 0 1.9rem 0;
+    color: #D0131C;
+  }
+  
+  .form-error-msg li {
+    margin-bottom: 0;
+  }
+  
+
+
+/* audio ---------------------- */ 
+
+  .form-audio {
+    margin-bottom: 48px; margin-bottom: 4.8rem;
+  }
+  
+  .form-audio li {
+    width: 575px;
+    margin-bottom: 5px;
+  }
+
+  input[type=reset] {
+    margin-left: 19px; margin-left: 0.9rem;
+  }
+  
+  select#period,
+  input[id*="age"],
+  input[id*="id"] {
+    width: 40px;
+  }
+  
+  select#period {
+    margin-right: 19px; margin-right: 0.9rem;
+
+  }
+  
+  select {
+    text-transform: none; 
+    background-color: transparent;
+  
+    -webkit-appearance: none;
+       -moz-appearance: listbox;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+            
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+        -ms-border-radius: 0;
+         -o-border-radius: 0;
+            border-radius: 0;
+  }
+  
+  select#country,
+  select#language,
+  input[id*="author"],
+  input[id*="title"] {
+    width: 80%;
+  }
+  
+  
+   
+    
+/*------------------------------------------------
+  + CONTROLS */ 
+  
+/* paginator ---------------------- */
+
+  .asc:after  { content:"▲"; padding-left:3px; font-size: 11px; font-size: 1.1rem; color:#D0131C; }
+  .desc:after { content:"▼"; padding-left:3px; font-size: 11px; font-size: 1.1rem; color:#D0131C; }
+          
+    
+    
+/*------------------------------------------------
+  + AUDIO */ 
+
+  .audio_edit .playercell{
+      position:relative;
+      padding-left: 8px;
+      background: url(../src/indicator.gif) 50% 5px no-repeat transparent;
+  }
+
+  .audio_edit .player {   
+      background: url(../src/play.png) 5px 4px no-repeat #fff;
+      height:27px;
+      width:210px;
+      margin-top:4px;
+  }
+
+  .audio_edit #myform select {  
+/*      margin-right:16px;
+*/  }
+
+  .audio_edit #isauthorised_icon {
+      height:19px;
+      width:19px;
+      display:inline-block;
+      margin-left:-9px;
+  }
+
+  .audio_edit #isauthorised_icon.isauthorised_1 {
+      background :url(../src/is_authorised_1.png) 5px 6px transparent no-repeat;  
+  }
+
+  .audio_edit #isauthorised_icon.isauthorised_0 {
+      background :url(../src/is_authorised_0.png) 5px 6px transparent no-repeat;  
+  }
+
+
+/*------------------------------------------------
+  + HELPER */  
+    
+  
+/* Nicolas Gallagher's 
+    micro clearfix */ 
+    .row:before, .row:after, .clearfix:before, .clearfix:after { content:""; display:table; }
+    .row:after, .clearfix:after { clear: both; }
+    .row, .clearfix { zoom: 1; }
+    
+/* For image replacement */
+  .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+  .ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+  .hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+  .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+  .invisible { visibility: hidden; }
+  
+/* Don't use native buttons on iOS */
+  input[type=submit].button, button.button { -webkit-appearance: none; }
+
+
+
+/*------------------------------------------------
+  + JAVASCRIPT STYLES 
+  - toggle slide */
+  
+
+/*------------------------------------------------
+  + AUDIO ADMIN */
+
+.edit_multiple_selection form select {
+    
+    height: 70px; height: 7rem;
+}
+
+
+
+
+/*------------------------------------------------
+  + MEDIA QUERIUS */
+
+
+  @media only screen and (max-width: 600px) {		
+    
+    .form
+    .table {
+      margin-right: 0;
+    }
+    
+    .form li {
+      width: 100%;
+    }
+    
+    .table,
+    .form,
+    .form input[type=text],
+     input[type=password]{
+      width: 100%;
+    }
+    
+    table {
+      display: table;
+    }
+
+    .form input[type=text],
+     input[type=password]{
+      float: none;
+    }
+    
+  }  
+
+   	
+  @media handheld, only screen and (max-width: 767px) {
+
+  }
+
+
+
+  @media only screen and (max-width: 1280px) and (min-width: 768px) {
+
+  }
+
+
+  @media only screen and (max-device-width: 800px), {
+
+ 
+  } 	   
+
+
+
+
+/*------------------------------------------------
+  + PRINT STYLES 
+    Inlined to avoid required HTTP connection: h5bp.com/r */
+
+  @media print {
+    * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+    a, a:visited { text-decoration: underline; }
+    a[href]:after { content: " (" attr(href) ")"; }
+    abbr[title]:after { content: " (" attr(title) ")"; }
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+    pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+    thead { display: table-header-group; } /* h5bp.com/t */
+    tr, img { page-break-inside: avoid; }
+    img { max-width: 100% !important; }
+    @page { margin: 0.5cm; }
+    p, h2, h3 { orphans: 3; widows: 3; }
+    h2, h3 { page-break-after: avoid; }
+  }
+  
+  
+
+    
+
+
+
+
+
+
+
+
+

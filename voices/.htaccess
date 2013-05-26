@@ -1,0 +1,13 @@
+#ErrorDocument 404 http://pingu.eb-zuerich.ch/kurs/webprog19/rb/project/modrewrite/error.html 
+Options +FollowSymLinks -Indexes
+
+RewriteEngine On
+
+RewriteBase /ebZuerich/m4/voices_rhea_pingu/voices
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+
+
+RewriteRule ^(.*)$ index.php/$1 [L]
