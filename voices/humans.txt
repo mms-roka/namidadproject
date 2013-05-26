@@ -1,0 +1,20 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Roger und Rhea
+  Site: 
+  Twitter: 
+  Location: Switzerland
+
+/* THANKS */
+  Names (& URL): 
+
+/* SITE */
+  Standards: PHP, HTML5, CSS3
+  Components: CodeIgniter 2.1.2, HTML5 Boilerplate, Modernizr, jQuery
+  Software:
+  
+
+  

@@ -1,0 +1,53 @@
+TODO Roger:
+
+- OK: ADMIN Webpage: von Rhea DivRähmli für Admin-Bereich einpflanzen
+- OK: UPLOAD AUDIO Webpage: recorder und document root dynamiseren (dann gibt es beim zügeln des recorders nie probleme)
+- OK: UPLOAD => stylen mit Rheas css
+- OK: UPLOAD und EXTRACT: Kein Zurück nach Extract view zum nochmals hochladen und user message
+- OK - aber Grösse nicht dynamisierbar: recorder grösse dynamisieren und umgestalten
+- OK: ADMIN Webpage: Bug wegen Anzahl DB-Rows: 57 / 58 resp. Admin Datenbank COUNT optimieren (leftjoin)
+- OK: IN PROGRESS: ADMIN Webpage: jeditable => zum editieren
+- OK: ADMIN: Bug mit Cookie => Firefox
+- OK: UPLOAD: E-Mail adresse Susanna und Rhea aktivieren
+- OK: UPLOAD: E-Mail Adressen in config
+- OK: UPLOAD EXTRACT: einbinden Audio-Player
+- OK: MP3 Player => Fallback    (mediaelement)
+- OK: Extract: 2 sprachig
+- OK: UPLOAD: Submit button von Player kleiner
+- OK: Schönere checkbox grün/rot bei is_authorised
+
+
+
+
+
+rr
+
+rr
+
+
+eee
+
+
+Herabsteigend priorisiert: 
+
+- VOICES: sortieren nach was?
+- VOICES: select nur das, was nötig
+- VOICES: Player stop wenn andere Voice öffnen
+- UPLOAD: checkbox aktivstatus und dropdown icon 
+- UPLOAD: Fehlermeldungen platzieren (warten auf Susannas Input)
+- UPLOAD BUG: tabindex bei checkbox und select
+- ADMIN (OK) UND UPLOAD UND EXTRACT => alles dynamisieren, wo möglich
+
+
+- UPLOAD: Transactions für MYSQL beim Upload fpormular
+
+
+
+nice to have if spare time:
+- ADMIN: editieren anderer Tabellen
+
+
+Roger: 
+- Wie man präsentieren muss?
+- Erklärung von Technik auch?
+- PHP Prüfung Blätter
